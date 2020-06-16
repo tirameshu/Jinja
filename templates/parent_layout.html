@@ -16,7 +16,9 @@
     <div class="container">
         <h2>Base Template</h2>
         <br>
-        {% block content %}{% endblock %} <!-- indicates child might override -->
+        {% block content %}
+        Parent content!!!
+        {% endblock %} <!-- indicates child might override -->
         <p>{{ self.content() }}</p>
         <br>
         <h2>The end of parent template</h2>
