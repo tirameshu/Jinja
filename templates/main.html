@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main File</title>
+<!--    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <style type="text/css">
+        .container {
+            max-width: 500px;
+            padding-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% extends "parent_layout.html" %}
+        {% block content %}
+        <h3> Start of child </h3>
+        <p>My string: {{ my_string }}</p>
+        <p>my_list[3]: {{ my_list[3] }}</p>
+        <p>Loop through list:</p>
+        <ul>
+            {% for n in my_list %}
+            <li>{{n}}</li>
+            {% endfor %}
+        </ul>
+        {% endblock %}
+    </div>
+</body>
+</html>
